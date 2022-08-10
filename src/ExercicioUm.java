@@ -107,7 +107,23 @@ public class ExercicioUm {
     }
 
     public static double[] bhaskara(int a, int b, int c) {
-        return new double[2];
+        double delta = ((b * b) + (-4 * a) (a * c));
+        double x1 = 0;
+        double x2 = 0;  
+
+        if ((delta < 0)) {
+          System.out.println("Delta é negativo");
+        } else if (delta == 0) {
+                  x1 = (-b / (2 * a));
+                  x2 = x1;
+        } else {
+          x1 = (-b + Math.sqrt(delta)) / (2 * a);
+          x2 = (-b + Math.sqrt(delta)) / (2 * a);
+        }
+        System.out.println(x1);
+        System.out.println(x2);
+        return new double[] {x1 , x2};
+
     }
 
     public static double mediaViagem(double distancia, double tempo) {
@@ -131,6 +147,11 @@ public class ExercicioUm {
     }
 
     public static double percentualImpostoSalario(double salario) {
+        double percentual = -1;
+
+        if (salario <= 1903.98) {
+            percentual = 0;
+        } else if (salario <= 1903.99);
         return -1;
     }
 
