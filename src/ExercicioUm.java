@@ -29,9 +29,11 @@ public class ExercicioUm {
         }
 
         switch (menu) {
-            // 1) Crie um programa que calcule a média (`(nota1 + nota2 + nota3 / 3)`)
+            // 1) Crie um programa que calcule a média (`(nota1 + nota2 + nota3 / 3)`
             case 1:
-                // media(double notaUm, double notaDois, double notaTres)
+            System.out.println("Os números utilizados são: 5, 7, 10");
+            double valorMedia = media(5,7,10);
+            System.out.println("A média dos números é:  " + valorMedia);
                 break;
             // 2) Crie um programa que calcule a área (`lado1 * lado2`)
             case 2:
@@ -43,11 +45,11 @@ public class ExercicioUm {
                 break;
             // 4) Crie um programa que avalie se um valor é maior do que o dobro de outro valor
             case 4:
-                // valorMaiorQueDobro(double base, double verificar)
+            valorMaiorQueDobro(4, 9);
                 break;
             // 5) Crie um programa que calcule _bhaskara_
             case 5:
-                // bhaskara(int a, int b, int c);
+               bhaskara(1, 4, 1);
                 break;
             // 6) Crie um programa que calcule a velocidade média de uma viagem (`distancia (km) / tempo (h)`)
             case 6:
@@ -102,12 +104,31 @@ public class ExercicioUm {
         return 0;
     }
 
-    public static boolean valorMaiorQueDobro(double base, double verificar) {
+    public static boolean valorMaiorQueDobro(double base, double verificar) 
+    {
+        if (base > verificar * 2) {
+            return true;
+        } else {
         return false;
+        }
     }
 
     public static double[] bhaskara(int a, int b, int c) {
-        return new double[2];
+        double delta = (b * b) - (4 * a * c);
+        double x1 = 0;
+        double x2 = 0;
+
+        if (delta < 0) {
+            System.out.println("Delta é negativo");
+        }
+        else if (delta == 0) {
+            x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            x2 = (+b + Math.sqrt(delta)) / (2 * a);
+        }
+        System.out.println(x1);
+        System.out.println(x2);
+        
+        return new double[] {x1, x2} ;
     }
 
     public static double mediaViagem(double distancia, double tempo) {
