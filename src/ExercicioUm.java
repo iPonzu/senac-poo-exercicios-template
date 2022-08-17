@@ -128,7 +128,7 @@ public class ExercicioUm {
         System.out.println(x1);
         System.out.println(x2);
         
-        return new double[] {x1, x2} ;
+        return new double[] {x1,x2};
     }
 
     public static double mediaViagem(double distancia, double tempo) {
