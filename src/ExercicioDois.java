@@ -31,14 +31,17 @@ public class ExercicioDois {
         switch (menu) {
             // 1) Crie um programa que receba três notas calcule a média e diga se foi aprovado (`(nota1 + nota2 + nota3 / 3)`) e (`média maior que 7 para ser aprovado`).
             case 1:
+            System.out.println("O valor total da média é  " + calculaMedia(8, 7, 8)/3);
                 // calculaMedia(double notaUm, double notaDois, double notaTres);
                 break;
             // 2) Crie um programa que receba um número e indique o mês que representa.
             case 2:
+            
                 // qualMes(int mes);
                 break;
             // 3) Crie um programa que simule um jogo da forca, com a entrada da palavra oculta, a quantidade de tentativas para acerto e depois solicite a entrada da palavra. A cada erro deve imprimir a quantidade de tentativas restantes e o 'membro' que foi marcado. Ao final deve imprimir se acertou ou não a palavra e se foi 'enforcado'.
             case 3:
+            
                 // forca(String palavra, int tentativa, Scanner scanner);
                 break;
             // 4) Crie um programa que imprima a tabuada de 0 a 10.
@@ -88,10 +91,25 @@ public class ExercicioDois {
     }
 
     public static double calculaMedia(double notaUm, double notaDois, double notaTres) {
+        double notas = (notaUm + notaDois + notaTres) /3;
+
+        if (notas >= 7){
+            System.out.println("Aprovado");
+        }
+        else if (notas <= 7) {
+            System.out.println("Reprovado");
+        }
+    
         return 0;
     }
 
+
     public static String qualMes(int mes) {
+    
+    String[]
+
+
+
         return "";
     }
 
