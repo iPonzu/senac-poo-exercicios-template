@@ -36,12 +36,36 @@ public class ExercicioDois {
                 break;
             // 2) Crie um programa que receba um número e indique o mês que representa.
             case 2:
-            
-                // qualMes(int mes);
+            String mes = "";
+
+            try{
+            System.out.println("Informe um número de 1 à 12: ");
+            int qualMes = scanner.nextInt();
+            int numeroMes = scanner.nextInt();
+            mes = qualMes(numeroMes);
+            System.out.println("O mês escolhido: " + mes);                
+
+            }catch(Exception e){
+
+                System.out.println("klkl");
+
+            }
                 break;
             // 3) Crie um programa que simule um jogo da forca, com a entrada da palavra oculta, a quantidade de tentativas para acerto e depois solicite a entrada da palavra. A cada erro deve imprimir a quantidade de tentativas restantes e o 'membro' que foi marcado. Ao final deve imprimir se acertou ou não a palavra e se foi 'enforcado'.
             case 3:
-            
+                System.out.println("Digite  palavra oculta");
+                String palavra = scanner.next();
+                System.out.println("Digite a quantidade de tentativas");
+                int tentativas = scanner.nextInt();
+
+                for (int i = tentativas; i > 0; i--){
+                    System.out.println("Digite a palavra da tentativa " + i + ": ");
+                    String palavraTentativa = scanner.next();
+                }
+
+                if (palavra.equals(palavraTentativa)){
+                    System.out.println("Acertou!");
+                }
                 // forca(String palavra, int tentativa, Scanner scanner);
                 break;
             // 4) Crie um programa que imprima a tabuada de 0 a 10.
@@ -50,7 +74,14 @@ public class ExercicioDois {
                 break;
             // 5) Crie um programa que receba uma String e imprima linha a linha suas letras.
             case 5:
-                // letraALetra(String palavra);
+            System.out.println("Digite a palavra: ");
+            String palavraLetraALetra = scanner.next();
+            char[] letras = letraALetra(palavraLetraALetra);
+
+            for (char letra : letras){
+                System.out.println(letra);
+            }
+               // letraALetra(String palavra);
                 break;
             // 6) Crie um programa que de a soma de todos os números ímpares e múltiplos de 7 entre 1 e 500.
             case 6:
@@ -104,12 +135,51 @@ public class ExercicioDois {
     }
 
 
+    /**
+     * @param 
+     * @return
+     */
     public static String qualMes(int mes) {
-    
-    String[]
+     
+        switch (mes){
 
+            case 1:
+            return "Janeiro";
 
+            case 2:
+            return "Fevereiro";
 
+            case 3:
+            return "Março";
+
+            case 4:
+            return "Abril";
+
+            case 5:
+            return "Maio";
+
+            case 6:
+            return "Junho";
+
+            case 7:
+            return "Julho";
+
+            case 8:
+            return "Agosto";
+
+            case 9:
+            return "Setembro";
+
+            case 10:
+            return "Outubro";
+
+            case 11:
+            return "Novembro";
+
+            case 12:
+            return "Dezembro";
+
+        }
         return "";
     }
 
