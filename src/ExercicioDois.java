@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class ExercicioDois {
 
 
+    private static Object palavratentativa;
+
     public static void call(Scanner scanner) {
         System.out.println("=== EXERCÍCIOS - LISTA 2 ===");
 
@@ -63,7 +65,7 @@ public class ExercicioDois {
                     String palavraTentativa = scanner.next();
                 }
 
-                if (palavra.equals(palavraTentativa)){
+                if (palavra.equals(palavratentativa)){
                     System.out.println("Acertou!");
                 }
                 // forca(String palavra, int tentativa, Scanner scanner);
@@ -188,6 +190,9 @@ public class ExercicioDois {
     }
 
     public static char[] letraALetra(String palavra) {
+
+            
+
         return new char[1];
     }
 
