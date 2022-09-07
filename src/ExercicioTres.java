@@ -33,10 +33,44 @@ public class ExercicioTres {
             menu = 0;
         }
 
+        int x;
         switch (menu) {
             // 1) Crie um programa que receba um valor e calcule a tabuada deste valor, salvando seu resultado em um arquivo de texto.
             case 1:
-                // tabuada(int number);
+                int tabuada = 0;
+                int numero;
+                int total = 0;
+                Scanner ler = new Scanner(System.in);
+                System.out.println("Informe um número: ");
+                numero = ler.nextInt();
+
+                String arq = "C:/Users/João/OneDrive/Área de Trabalho/poo/senac-poo-exercicios-template/src/listadenumeros.txt";
+
+                for(x = 0; x < 10; x++)
+                total = numero * ++tabuada;
+                String resultado = numero + " x " + tabuada + " = " + total;
+                System.out.println(resultado);
+
+                try{
+                    BufferedReader leitura = new BufferedReader(new FileReader(arq));
+                    String valor = null;
+                    total = 0;
+                    int cont = 0;
+
+                    ler.close();
+
+                    Integer.parseInt(valor);
+                    
+                   /*  for(Integer integer: num){
+                    BufferedWriter escrita = new BufferedWriter(new FileWriter(arq));
+                    escrita.append(integer + "\n");
+                    }
+                    */
+                    
+                } catch(IOException e){
+                    System.out.println("Erro, tente novamente" + e.getMessage());
+                }
+
                 break;
             // 2) Crie um programa que leia e imprima no console todas as linhas de um arquivo de texto.
             case 2:
@@ -86,6 +120,8 @@ public class ExercicioTres {
     }
 
     public static void tabuada(int numero) {
+
+
         
     }
 
